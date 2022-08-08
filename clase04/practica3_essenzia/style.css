@@ -1,0 +1,408 @@
+/** Reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --pure-white: #ffffff;
+  --light-blue-white: #e2e8f0;
+  --black: #141313;
+  --black-2: #1a1818;
+  --dark-blue: #0d172a;
+  --darken-blue: #1e293b;
+  --gray: #808080;
+}
+
+/** HEADER NAVBAR**/
+header {
+  position: fixed;
+  top: 0;
+  width: 92%;
+}
+.container-header {
+  background-color: var(--pure-white);
+  height: 12vh;
+  width: 98vw;
+  display: flex;
+}
+
+.child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--black);
+}
+
+.child.logo {
+  /*width: 18%;*/
+  flex-grow: 2;
+  height: 100%;
+}
+
+.child.cta {
+  /*width: 58%;*/
+  flex-grow: 4;
+  height: 100%;
+}
+
+.child.links {
+  /*width: 5%;*/
+  flex-grow: 1;
+  height: 100%;
+}
+
+@media screen and (max-width: 568px) {
+  .child.logo {
+    width: 40%;
+  }
+  
+  .child.cta {
+    display: none;
+  }
+  
+  .child.links {
+    width: 15%;
+  }
+}
+
+.child.links:hover{
+  background-color: var(--black);
+  color: var(--pure-white);
+}
+
+/* MAIN */
+.container.hero-image {
+  margin-top: 12vh;
+  border: 1px solid var(--black-2);
+  height: 78vh;
+  width:100vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-image: url("https://www.esenzzia.com/modules/ps_imageslider/images/f84a8567c559b194fc58867a27b495da22b8a449_Post%20de%20Instagram%20rebajas%20ofertas%20descuentos%20femenino%20rosa%20(1947%C2%A0%C3%97%C2%A0876%C2%A0px)%20(1).png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+/* Buttons */
+.btn-sales,
+.btn-help {
+  height: 100%;
+  width: 50%;
+}
+
+@media screen and (max-width: 568px) {
+  .btn-sales {
+    width: 80%;
+  }
+
+  .btn-help {
+    width: 20%;
+  }
+
+}
+/* Button Sales*/
+.btn-sales {
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.child-button-uno {
+  background-color: var(--black);
+  border: none;
+  color: var(--pure-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  height: 3rem;
+  padding: 1rem 3rem;
+  margin: 30px;
+}
+
+.child-button-uno:hover {
+  background-color: var(--pure-white);
+  color: var(--black);
+  transition-duration: 0.5s;
+}
+
+/* Button Help */
+.child-button-dos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 1.75rem;
+  background-color: var(--black);
+  color: var(--pure-white);
+  border-radius: 50px;
+  border: 2px solid var(--pure-white);
+}
+
+.child-button-dos:hover {
+  background-color: var(--pure-white);
+  color: var(--black);
+  transition-duration: 0.5s;
+  border: 1.5px solid var(--black);
+}
+
+/* THIN BANNER*/
+.container-thin-banner {
+  height: 6vh;
+  width: 100vw;
+  margin-bottom: 2rem;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.container-thin-banner p {
+  text-transform: uppercase;
+}
+
+/* TRADE MARK */
+.container-trade-mark {
+  background-color: var(--pure-white);
+  height: 70vh;
+  width:100vw;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.phrase,
+.search-catalog {
+  display: flex;
+  width: 50vw;
+  height: 100%;
+}
+
+.phrase .text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width:765px) {
+  .phrase .text {
+    font-size: 2rem;
+  }
+}
+
+.search-catalog {
+  display: flex;
+  flex-direction: column;
+}
+
+.txt {
+  height: 10%;
+  width: 100%;
+}
+.search-catalog-input {
+  height: 80%;
+  width: 100%;
+  font-size: 250px;
+  color: rgb(124, 117, 117);
+  text-align: center;
+  border:none;
+  text-decoration-line: underline; 
+}
+
+@media screen and (max-width: 765px) {
+  .search-catalog-input {
+    font-size: 80px;
+  }
+}
+.catalog {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog-see,
+.catalog-search {
+  background-color: var(--pure-white);
+  border: 0 solid var(--light-blue-white);
+  box-sizing: border-box;
+  color: var(--dark-blue);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none var(--dark-blue) solid;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.catalog-see:hover {
+  border-bottom: 0.20rem solid var(--black);
+}
+
+.catalog-search:hover {
+  background-color: var(--darken-blue);
+  color: var(--pure-white);
+}
+
+@media (min-width: 768px) {
+  .button-81 {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+}
+  
+.container-mas-vendidos{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.text-vendidos {
+  width: 95%;
+}
+
+.container-btn {
+  width: 5%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn {
+  height: 100%;
+  width: 30px;
+  color: var(--gray);
+  background-color: var(--pure-white);
+  border: none;
+}
+
+.container-cards {
+  width: 90%;
+  height: 55%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.card {
+  width: 23%;
+  height: 100%;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 765px) {
+  .card {
+    width: 48%;
+    margin-bottom: 0.25rem;
+  }
+}
+.link-vendidos a {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  text-decoration-color: none;
+  font-style: none;
+  color: var(--black);
+  font-size: 12px;
+}
+
+.p-white {
+  color: var(--pure-white);
+}
+
+.descuento {
+  display: flex;
+  justify-content: space-between;
+  color: var(--pure-white);
+  
+}
+
+.desc-porcent {
+  border: 1px solid var(--pure-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px ;
+  padding: 5px;
+}
+
+.floral {
+  padding: 10px;
+  font-size: 12px ;
+  font-weight: 500;
+}
+
+.codigo {
+  color: var(--pure-white);
+  font-size: 100px;
+  font-weight: 700;
+  align-self: center;
+  
+}
+
+.informacion {
+  padding: 5px 35px;
+}
+
+footer {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--black);
+}
+
